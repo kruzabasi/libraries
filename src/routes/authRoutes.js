@@ -45,6 +45,8 @@ function router(nav) {
         failureRedirect: "/"
       })
     );
+  /** implement logout*/
+  /** */
   authRouter
     .route("/profile")
     .all((req, res, next) => {
@@ -57,6 +59,7 @@ function router(nav) {
     .get((req, res) => {
       res.json(req.user);
     });
+
   return authRouter;
 }
 
